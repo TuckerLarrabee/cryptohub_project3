@@ -11,10 +11,8 @@ CryptoHub is a one-stop shop for everything cryptocurrency. Users can review pri
 
 ## Technologies Used
 ```
-Node.js
+React
 Express
-Handlebars
-Sequelize
-News API
-Chart.js
+MongoDB
+GraphQL
 ```
