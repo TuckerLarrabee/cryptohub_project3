@@ -96,7 +96,7 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: rgb(182, 219, 79);
 }
 
 button:hover {
@@ -114,10 +114,6 @@ img {
 
 span[role="img"] {
   cursor: default;
-}
-
-form {
-  width: 40%;
 }
 
 input {
@@ -219,6 +215,15 @@ input:focus {
   background-position: center;
   height: 10vh;
   width: 20vw;
+}
+
+#cryptoForm {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.center {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

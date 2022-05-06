@@ -1,14 +1,16 @@
 import React from "react";
+import Search from "../components/Search/Search";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
 
 const Home = () => {
   return (
-    <div className="container">
-      <CategoryMenu />
-      <ProductList />
-    </div>
+    <>
+      {/* <CategoryMenu />
+      <ProductList /> */}
+      <Search/>
+    </>
   );
 };
 
