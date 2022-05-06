@@ -9,7 +9,7 @@ const typeDefs = gql`
 
   type Crypto {
     _id: ID
-    cryptocurrencyName: String
+    cryptocurrency: String
     username: [User]
   }
 

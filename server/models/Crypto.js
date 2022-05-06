@@ -3,10 +3,9 @@ const { Schema, model } = require('mongoose');
 
 const cryptoSchema = new Schema(
   {
-    cryptocurrencyName: {
+    cryptocurrency: {
       type: String,
       required: true,
-      maxlength: 280
     },
     username: {
       type: String,
