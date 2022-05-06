@@ -203,6 +203,16 @@ input:focus {
   color: var(--error);
 }
 
+/* Begin Custom Styling */
+
+.cryptotext {
+  font-size: 3rem;
+}
+
+.navbar {
+  align-items: center;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
