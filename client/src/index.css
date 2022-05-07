@@ -191,6 +191,10 @@ input:focus {
 
 /* Begin Custom Styling */
 
+li {
+  padding: 5px;
+}
+
 .Home {
   display: flex;
   flex-direction: row-reverse;
