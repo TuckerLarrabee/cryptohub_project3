@@ -45,6 +45,7 @@ const Home = () => {
                 icon={coin.icon}
                 price={coin.price}
                 symbol={coin.symbol}
+                marketCap={coin.marketCap}
                 key={coin.name}
               />
             );
