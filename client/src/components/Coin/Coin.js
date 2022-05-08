@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
-function Coin({ name, icon, price, symbol, marketCap }) {
+function Coin({ name, icon, price, symbol, marketCap, id }) {
 
     const [isActive, setActive] = useState(false);
-    const toggleClass = () => {
+    const toggleClass = (id) => {
+        console.log(id)
         setActive(!isActive);
       };
 
@@ -38,7 +39,7 @@ function Coin({ name, icon, price, symbol, marketCap }) {
                 <h3 className="px-3"> Price: {"$" + comma}</h3>
                 <h3 className="px-3">Market Cap: {"$" + cap}</h3>
             </div>
-            <button className={isActive ? 'liked': null} onClick={toggleClass} id="like-button"></button>
+            <button className={isActive ? 'liked like-button': 'like-button'} onClick={() => toggleClass(id)}></button>
         </div>
     </div>
   );
