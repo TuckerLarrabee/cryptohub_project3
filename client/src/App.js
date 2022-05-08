@@ -47,6 +47,8 @@ function App() {
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
+              {/* If logged in, profile link is available 
+              <Route exact path="/profile" component={Profile} /> */}
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/success" component={Success} />

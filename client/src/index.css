@@ -11,6 +11,8 @@
 
 * {
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
 }
 
 html,
@@ -229,6 +231,8 @@ li {
   display: flex;
   flex-direction: column;
   align-content: flex-end;
+  padding: 1rem;
+  margin: 2rem;
 }
 
 .cryptoHeader input {
@@ -245,9 +249,65 @@ li {
 .cryptoDisplay {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  max-height: 85vh;
+  overflow: auto;
+}
+
+/* BEGIN SCROLLBAR STYLING */
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  border: 3px solid #97a1b9;
+  background-color: #0d314d;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, rgb(47, 225, 231), rgb(121, 255, 108));
+}
+
+/*  To customize the sliding buttons*/
+::-webkit-scrollbar-button:single-button {
+  background-color: #082032;
+  display: block;
+  background-size: 10px;
+  background-repeat: no-repeat;
+}
+
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-radius: 5px 5px 0 0;
+  height: 16px;
+  width: 16px;
+  background-position: center 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(121, 255, 108)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(6, 222, 225)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-radius: 0px 0px 5px 5px;
+  height: 16px;
+  width: 16px;
+  background-position: center 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(121, 255, 108)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(6, 222, 225)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 100,0 50,50'/></svg>");
 }
 
 .coin {
@@ -262,6 +322,7 @@ li {
   border-radius: 10px;
   margin: 20px;
   text-align: center;
+  overflow: auto;
 }
 
 .coin img {
@@ -270,6 +331,49 @@ li {
   align-self: center;
 }
 
+div.coin:hover {
+  background-color: rgb(112, 112, 112);
+  color: rgb(188, 255, 53);
+  -webkit-text-stroke: 0.5px black;
+}
+
+.like-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#like-button {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  cursor: pointer;
+ /* border: 1px solid black; */
+    border: none;
+   background:none;
+}
+
+#like-button::before {
+    font-size: 3em;
+    color: #000;
+    content: '♥';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#like-button::after {
+    font-size: 3em;
+    color: red;
+    content: '♥';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s;
+}
+#like-button.liked::after{
+  transform: translate(-50%, -50%) scale(1.1);
+}
 
 @media screen and (max-width: 768px) {
   .card {
