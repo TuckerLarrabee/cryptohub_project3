@@ -25,16 +25,18 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="py-2 col-2 cryptoHeader">
-        <label>
-          <h5 className="mx-1 center">Search for a Cryptocurreny:</h5>
-        </label>
-        <input
-          type="text"
-          placeholder="Dogecoin..."
-          onChange={(event) => {
-            setSearchWord(event.target.value);
-          }}
-        />
+        <div className="searchBox">
+          <label>
+            <h5 className="mx-1 center">Search for a Cryptocurreny:</h5>
+          </label>
+          <input
+            type="text"
+            placeholder="Dogecoin..."
+            onChange={(event) => {
+              setSearchWord(event.target.value);
+            }}
+          />
+        </div>
       </div>
       <div className="col-8 card-holder">
         <div className="cryptoDisplay">
