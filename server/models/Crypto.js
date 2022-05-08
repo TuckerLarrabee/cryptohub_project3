@@ -7,10 +7,6 @@ const cryptoSchema = new Schema(
       type: String,
       required: true,
     },
-    username: {
-      type: String,
-      required: false
-    },
     // createdAt: {
     //   type: Date,
     //   default: Date.now,
@@ -26,4 +22,4 @@ const cryptoSchema = new Schema(
 
 const Crypto = model('Crypto', cryptoSchema);
 
-module.exports = Crypto;
+module.exports = {Crypto, cryptoSchema};

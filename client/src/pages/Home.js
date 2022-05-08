@@ -30,7 +30,7 @@ const Home = () => {
         </label>
         <input
           type="text"
-          placeholder="Bitcoin..."
+          placeholder="Dogecoin..."
           onChange={(event) => {
             setSearchWord(event.target.value);
           }}
@@ -47,6 +47,7 @@ const Home = () => {
                 symbol={coin.symbol}
                 marketCap={coin.marketCap}
                 key={coin.name}
+                id={coin.id}
               />
             );
           })}

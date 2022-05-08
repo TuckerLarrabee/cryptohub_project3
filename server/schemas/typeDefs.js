@@ -5,12 +5,12 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    coins: [Crypto]
   }
 
   type Crypto {
     _id: ID
     cryptocurrency: String
-    username: [User]
   }
 
   type Auth {
@@ -28,6 +28,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    favorite(username: String!, cryptocurrency: String!): Crypto
   }
 `;
 

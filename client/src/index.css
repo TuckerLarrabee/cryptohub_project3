@@ -342,7 +342,7 @@ div.coin:hover {
   justify-content: space-evenly;
 }
 
-#like-button {
+.like-button {
   display: inline-block;
   position: relative;
   font-size: 16px;
@@ -352,7 +352,7 @@ div.coin:hover {
    background:none;
 }
 
-#like-button::before {
+.like-button::before {
     font-size: 3em;
     color: #000;
     content: '♥';
@@ -361,7 +361,7 @@ div.coin:hover {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#like-button::after {
+.like-button::after {
     font-size: 3em;
     color: red;
     content: '♥';
@@ -371,7 +371,7 @@ div.coin:hover {
     transform: translate(-50%, -50%) scale(0);
     transition: transform 0.2s;
 }
-#like-button.liked::after{
+.like-button.liked::after{
   transform: translate(-50%, -50%) scale(1.1);
 }
 
