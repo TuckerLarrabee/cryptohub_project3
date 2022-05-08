@@ -8,11 +8,12 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
+          {/* Placeholder for Profile link if user loggedin
           <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
+            <Link to="/profile">
+              Profile
             </Link>
-          </li>
+          </li> */}
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
