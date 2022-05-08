@@ -4,6 +4,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    // Use this query for Profile link
     me: async (parent, args, context) => {
       if (context.user) {
         console.log(context.user)
@@ -49,6 +50,10 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+  
+    favorite: async (parent, { username, cryptocurrency}, context) => {
+      User.findOneAndUpdate({username}, {cryptocurrency})
+    }
   }
 };
 
