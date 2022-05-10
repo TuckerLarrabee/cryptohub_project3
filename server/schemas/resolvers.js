@@ -29,7 +29,6 @@ const resolvers = {
   },
   Mutation: {
     addUser: async (parent, args) => {
-      console.log(args)
       const user = await User.create(args);
       const token = signToken(user);
     
@@ -52,10 +51,18 @@ const resolvers = {
       return { token, user };
     },
   
-    favorite: async (parent, { username, cryptocurrency}, context) => {
-      User.findOneAndUpdate({username}, {cryptocurrency})
+    favorite: async (parent, { cryptocurrency}, context) => {     
+      console.log("CONTEXT", context.user)
+      // console.log("CRYPTO", cryptocurrency.toLowerCase())
+      const favoritedCoin = await User.findOneAndUpdate(
+          { username: context.user.username },
+          { $push: { coins: { cryptocurrency } } },
+          { new: true, runValidators: true }
+        );
+
+        return favoritedCoin;
+      }
     }
-  }
-};
+  };
 
 module.exports = resolvers;

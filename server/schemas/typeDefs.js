@@ -28,7 +28,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    favorite(username: String!, cryptocurrency: String!): Crypto
+    favorite(cryptocurrency: String!): Crypto
   }
 `;
 
