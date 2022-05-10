@@ -41,7 +41,7 @@ function Coin({ name, icon, price, symbol, marketCap, id }) {
         {
           variables:
             {
-              cryptocurrency: name
+              cryptocurrency: id
             }
         }
       ) 
