@@ -1,7 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { FAVORITE_COIN } from "../../utils/mutations";
+import { useMutation } from "@apollo/client";
 
 function Coin({ name, icon, price, symbol, marketCap, id }) {
+
+    const [addFavorite] = useMutation(FAVORITE_COIN);
 
     const [isActive, setActive] = useState(false);
     const toggleClass = (id) => {
@@ -29,6 +33,19 @@ function Coin({ name, icon, price, symbol, marketCap, id }) {
    let cap = nFormatter(marketCap);
    
 
+   function handleFavorite () {
+
+     toggleClass(id);
+
+      addFavorite(
+        {
+          variables:
+            {
+              cryptocurrency: name
+            }
+        }
+      ) 
+   }
 
   return (
     <div className="coin">
@@ -39,7 +56,7 @@ function Coin({ name, icon, price, symbol, marketCap, id }) {
                 <h3 className="px-3"> Price: {"$" + comma}</h3>
                 <h3 className="px-3">Market Cap: {"$" + cap}</h3>
             </div>
-            <button className={isActive ? 'liked like-button': 'like-button'} onClick={() => toggleClass(id)}></button>
+            <button className={isActive ? 'liked like-button': 'like-button'} onClick={() => handleFavorite()}></button>
         </div>
     </div>
   );
