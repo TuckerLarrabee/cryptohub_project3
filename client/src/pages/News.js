@@ -1,29 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import * as React from 'react';
 import axios from 'axios';
 
 
 export const News = () => {
-    const [list, setList] = useState(null);
-
-    // const testApi = async () => {
-    //   console.log("CLICK WORKED")
-    //   await fetch('https://api.coinstats.app/public/v1/news/handpicked?skip=0&limit=20')
-    //   .then(response => {
-    //     console.log(response.json())
-    //     return response.json()
-    //   })
-    //   .then(data => {
-    //     setList(data)
-    //   });
-    // }
-
-    // const getList = () => {
-    //   console.log('CLICK WORKED')
-    //   return fetch('https://api.coinstats.app/public/v1/news/handpicked?skip=0&limit=20')
-    //     .then(data => data.json())
-    // }
+    const [list, setList] = React.useState(null);
     
-    useEffect(() => {
+    React.useEffect(() => {
         axios.get("https://api.coinstats.app/public/v1/news/handpicked?skip=0&limit=20")
           .then(
           (response) => {
@@ -45,6 +27,20 @@ export const News = () => {
 
     return (
         <div className="news">
+          <div><h1>NEWS</h1></div>
+            <style jsx>{`
+              .news-items {
+                    list-style: none;
+                    padding-left: 0;
+                    font-size: 12px;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                  }
+             .news-items li {
+                margin-bottom: 10px;
+             }
+            `}</style>
             <div class="news-items">
               {renderNewsItems()}
             </div>
