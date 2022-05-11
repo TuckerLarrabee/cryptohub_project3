@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import {SidebarData} from './SidebarData';
+import SubMenu from './SubMenu';
 
 const Drop = styled.div`
     background: #fafafa;
@@ -56,6 +57,9 @@ const showSidebar = () => setSidebar(!sidebar)
         <DropIcon to='#'>
             <AiIcons.AiOutlineClose onClick={showSidebar} />
         </DropIcon>
+        {SidebarData.map((item, index) => {
+            return <SubMenu item={item} key={index}/>;
+        })}
         </SidebarWrap>
     </SidebarNav>
     </>
