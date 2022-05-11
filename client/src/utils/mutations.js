@@ -29,3 +29,11 @@ export const FAVORITE_COIN = gql`
     }
   }
 `;
+
+export const UNFAVORITE_COIN = gql`
+  mutation unfavoriteCoin($cryptocurrency: String!) {
+    unfavorite(cryptocurrency: $cryptocurrency) {
+      cryptocurrency
+    }
+  }
+`;
