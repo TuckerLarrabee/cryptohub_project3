@@ -48,11 +48,12 @@ const Profile = () => {
           "flex-wrap": "wrap",
         }}
       >
-        <h1>Hello, {data?.me?.username}</h1>
+        <h1 style={{"padding-top": "1rem"}}>Hello, {data?.me?.username}</h1>
         <div className="profile-container" 
              style={{"display": "flex",
                      "flex-wrap": "wrap",
-                     "justifyContent": "center"
+                     "justifyContent": "center",
+                     "padding-top": "2rem"
         }}>
           {favoritedCoins.map((coin) => {
             return (
