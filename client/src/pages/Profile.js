@@ -49,21 +49,27 @@ const Profile = () => {
         }}
       >
         <h1>Hello, {data?.me?.username}</h1>
-        {favoritedCoins.map((coin) => {
-          return (
-            <Coin
-              name={coin.name}
-              icon={coin.icon}
-              price={coin.price}
-              symbol={coin.symbol}
-              marketCap={coin.marketCap}
-              key={coin.name}
-              id={coin.id}
-              arr={coinArr}
-              showFavorites={true}
-            />
-          );
-        })}
+        <div className="profile-container" 
+             style={{"display": "flex",
+                     "flex-wrap": "wrap",
+                     "justifyContent": "center"
+        }}>
+          {favoritedCoins.map((coin) => {
+            return (
+              <Coin
+                name={coin.name}
+                icon={coin.icon}
+                price={coin.price}
+                symbol={coin.symbol}
+                marketCap={coin.marketCap}
+                key={coin.name}
+                id={coin.id}
+                arr={coinArr}
+                showFavorites={true}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
