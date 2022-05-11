@@ -29,7 +29,8 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     favorite(cryptocurrency: String!): Crypto
+    unfavorite(cryptocurrency: String!): Crypto
   }
-`;
-
+  `;
+  
 module.exports = typeDefs;
