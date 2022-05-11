@@ -1,7 +1,7 @@
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
-  --tertiary: #B12704;
+  --tertiary: #4169e1;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -11,6 +11,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   scrollbar-width: thin;
   scrollbar-color: blue orange;
 }
