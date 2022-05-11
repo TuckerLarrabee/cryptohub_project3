@@ -299,10 +299,13 @@ font-size: 1.5rem;
   font-weight: bold;
   position: fixed;
   bottom: 0;
+  width: 100%;
+  background-color: white;
 }
 .footerDiv {
   display: flex;
   justify-content: center;
+  height: 40px;
 }
 
 /* BEGIN SCROLLBAR STYLING */
