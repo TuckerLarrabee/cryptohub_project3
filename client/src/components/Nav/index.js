@@ -7,7 +7,7 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row logout">
          {/* Placeholder for Profile link if user loggedin */}
           {/* <li className="mx-1">
             <Link to="/profile">
@@ -24,7 +24,7 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="signlog flex-row">
           <li className="mx-1 px-2">
             <Link to="/signup">
               Signup
