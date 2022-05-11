@@ -7,13 +7,13 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row logout">
          {/* Placeholder for Profile link if user loggedin */}
-          <li className="mx-1">
+          {/* <li className="mx-1">
             <Link to="/profile">
               Profile
             </Link>
-          </li>
+          </li> */}
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
@@ -24,7 +24,7 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="signlog flex-row">
           <li className="mx-1 px-2">
             <Link to="/signup">
               Signup
