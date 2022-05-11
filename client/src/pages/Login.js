@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
+import { LOGIN } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
@@ -34,9 +34,12 @@ function Login(props) {
       <Link to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form
+        className="logForm"
+        onSubmit={handleFormSubmit}
+      >
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
+          <label className='formLabel' htmlFor="email">Email address:</label>
           <input
             placeholder="youremail@test.com"
             name="email"
@@ -46,7 +49,7 @@ function Login(props) {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label className='formLabel' htmlFor="pwd">Password:</label>
           <input
             placeholder="******"
             name="password"

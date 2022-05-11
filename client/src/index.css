@@ -136,10 +136,15 @@ input:focus {
   flex-wrap: wrap;
 }
 
-.space-between {
+/* .space-between {
   justify-content: space-between;
-}
+} */
 
+.logForm {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
 .flex-end {
   justify-content: flex-end;
 }
@@ -228,6 +233,10 @@ li {
 
 .logout {
   margin-bottom: 0;
+}
+
+.formLabel {
+  padding-right: 2rem;
 }
 
 .signlog {
@@ -432,6 +441,12 @@ div.coin:hover {
     width: 100%;
   }
 }
+
+/* @media screen and (max-width: 1411px) {
+  .card-holder {
+    max-width: 100%;
+  }
+} */
 
 @media screen and (min-width: 1615) {
   .card {
