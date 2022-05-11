@@ -291,6 +291,20 @@ font-size: 1.5rem;
   overflow: auto;
 }
 
+.footer {
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+}
+.footerDiv {
+  display: flex;
+  justify-content: center;
+}
+
 /* BEGIN SCROLLBAR STYLING */
 ::-webkit-scrollbar {
   width: 20px;
