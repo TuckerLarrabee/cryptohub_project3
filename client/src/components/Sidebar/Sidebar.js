@@ -5,9 +5,10 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import {SidebarData} from './SidebarData';
 import SubMenu from './SubMenu';
+import { IconContext } from 'react-icons/lib';
 
 const Drop = styled.div`
-    background: #fafafa;
+    background: #fff;
     height: 80px;   
     display: flex;
     justify-content: flex-start;
@@ -24,7 +25,7 @@ const DropIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-    background: #fafafa;
+    background: #232F3E;
     width: 250px;
     height: 100vh;
     display: flex;
@@ -47,6 +48,7 @@ const showSidebar = () => setSidebar(!sidebar)
 
     return (
     <>
+    <IconContext.Provider value= {{ color: '#black'}}>
     <Drop>
         <DropIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
@@ -62,6 +64,7 @@ const showSidebar = () => setSidebar(!sidebar)
         })}
         </SidebarWrap>
     </SidebarNav>
+    </IconContext.Provider>
     </>
     );
 };

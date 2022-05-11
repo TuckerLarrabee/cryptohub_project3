@@ -14,13 +14,29 @@ const SidebarLink = styled(Link)`
     font-size: 18px;
 
     &:hover {
-        background: #252831;
+        background: #232F3E;
         border-left: 4px solid #632ce4;
         cursor: pointer;
     }
 `;
 const SidebarLabel = styled.span`
     margin-left: 16px;
+`;
+
+const DropdownLink = styled(Link)`
+    background: #232F3E;
+    height: 60px;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: f5f5f5;
+    font-size: 18px;
+
+    &:hover {
+        background: #632ce4;
+        cursor: pointer;
+    }
 `;
 
 const SubMenu = ({ item }) => {
@@ -42,6 +58,14 @@ const showSubnav = () => setSubnav(!subnav)
                     : null}
                 </div>
             </SidebarLink>
+            {subnav && item.subNav.map((item, index) => {
+                return (
+                    <DropdownLink to={item.path} key={index}>
+                        {item.icon}
+                        <SidebarLabel>{item.title}</SidebarLabel>
+                    </DropdownLink>
+                )
+            })}
         </>
     )
 }
