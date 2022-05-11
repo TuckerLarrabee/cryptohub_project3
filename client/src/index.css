@@ -216,8 +216,22 @@ li {
   background-image: url(../src/assets/CryptoHubLogo.png);
   background-size: cover;
   background-position: center;
-  height: 10vh;
+  height: 5vh;
   width: 20vw;
+  left: -30px;
+  position: relative;
+}
+
+.cSaeUB {
+  float: left;
+}
+
+.logout {
+  margin-bottom: 0;
+}
+
+.signlog {
+  margin-bottom: 0;
 }
 
 #cryptoForm {
@@ -397,6 +411,12 @@ div.coin:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1615) {
   .card {
     width: 100%;
   }
