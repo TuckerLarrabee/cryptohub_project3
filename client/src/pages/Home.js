@@ -5,22 +5,26 @@ import Coin from "../components/Coin/Coin";
 import { useEffect, useState } from "react";
 import { QUERY_ME } from "../utils/queries";
 import { useQuery } from "@apollo/client";
-let coinData;
-const coinArr = [];
 
 const Home = () => {
   const [listOfCryptos, setListOfCryptos] = useState([]);
   const [searchWord, setSearchWord] = useState("");
+  const [coinArr, setCoinArr] = useState([]);
 
-  const { loading, data } = useQuery(QUERY_ME);
+  const isLoggedIn = localStorage.getItem("id_token");
 
-  if (!loading) {
-    data.me.coins.map((coin) => {
-      coinArr.push(coin.cryptocurrency);
-    });
-  }
+  const { loading, data } = useQuery(QUERY_ME, { skip: !isLoggedIn });
 
-  console.log(coinArr);
+  useEffect(() => {
+    if (!loading && data) {
+      const favCoins = data.me.coins.map((coin) => {
+        return coin.cryptocurrency;
+      });
+      setCoinArr(favCoins || []);
+    }
+  }, [data]);
+
+  // console.log(coinArr);
 
   useEffect(() => {
     Axios.get("https://api.coinstats.app/public/v1/coins?skip=0").then(
@@ -64,6 +68,7 @@ const Home = () => {
                 key={coin.name}
                 id={coin.id}
                 arr={coinArr}
+                showFavorites={isLoggedIn}
               />
             );
           })}
