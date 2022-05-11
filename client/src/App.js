@@ -16,7 +16,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import OrderHistory from './pages/OrderHistory';
-
+import Sidebar from './components/Sidebar/Sidebar';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -44,6 +44,7 @@ function App() {
         <div>
           <StoreProvider>
             <Nav />
+            <Sidebar />
             <Switch>
               <Route exact path="/" component={Home} />
               {/* If logged in, profile link is available  */}
