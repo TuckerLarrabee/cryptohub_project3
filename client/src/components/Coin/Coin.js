@@ -1,15 +1,28 @@
 import React from "react";
 import { useState } from "react";
 import { FAVORITE_COIN, UNFAVORITE_COIN } from "../../utils/mutations";
-// import { QUERY_ME } from "../../utils/queries";
+import { QUERY_ME } from "../../utils/queries";
 import { useMutation } from "@apollo/client";
 
-function Coin({ name, icon, price, symbol, marketCap, id, arr }) {
-  const [addFavorite] = useMutation(FAVORITE_COIN);
-  const [removeFavorite] = useMutation(UNFAVORITE_COIN);
+function Coin({
+  name,
+  icon,
+  price,
+  symbol,
+  marketCap,
+  id,
+  arr,
+  showFavorites,
+}) {
+  const [addFavorite] = useMutation(FAVORITE_COIN, {
+    refetchQueries: [QUERY_ME],
+  });
+  const [removeFavorite] = useMutation(UNFAVORITE_COIN, {
+    refetchQueries: [QUERY_ME],
+  });
 
   let uniqueCoins = [...new Set(arr)];
-  console.log(uniqueCoins);
+  // console.log(uniqueCoins);
 
   const [isActive, setActive] = useState(false);
 
@@ -67,12 +80,14 @@ function Coin({ name, icon, price, symbol, marketCap, id, arr }) {
           <h3 className="px-3"> Price: {"$" + comma}</h3>
           <h3 className="px-3">Market Cap: {"$" + cap}</h3>
         </div>
-        <button
-          className={
-            uniqueCoins.includes(id) ? "liked like-button" : "like-button"
-          }
-          onClick={handleFavorite}
-        ></button>
+        {showFavorites && (
+          <button
+            className={
+              uniqueCoins.includes(id) ? "liked like-button" : "like-button"
+            }
+            onClick={handleFavorite}
+          ></button>
+        )}
       </div>
     </div>
   );
