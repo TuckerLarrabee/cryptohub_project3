@@ -1,15 +1,15 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_CRYPTOS = gql`
- {
-  crypto {
-    cryptocurrency
+  {
+    crypto {
+      cryptocurrency
+    }
   }
-}
-`
+`;
 
 export const QUERY_USER = gql`
-  {
+  query getUser {
     user {
       firstName
       lastName
@@ -30,12 +30,13 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_ME = gql`
-  {
+  query getMe {
     me {
       _id
       username
       coins {
         cryptocurrency
+        _id
       }
     }
   }
