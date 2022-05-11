@@ -9,6 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
+import Footer from './components/Footer/Footer';
 import Profile from './pages/Profile.js';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
@@ -55,6 +56,7 @@ function App() {
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>
+          <Footer></Footer>
         </div>
       </Router>
     </ApolloProvider>

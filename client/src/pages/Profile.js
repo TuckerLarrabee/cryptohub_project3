@@ -53,7 +53,8 @@ const Profile = () => {
              style={{"display": "flex",
                      "flex-wrap": "wrap",
                      "justifyContent": "center",
-                     "padding-top": "2rem"
+                     "padding-top": "2rem",
+                     "padding-bottom": "2rem"
         }}>
           {favoritedCoins.map((coin) => {
             return (

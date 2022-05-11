@@ -3,12 +3,11 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
 function Nav() {
-
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row logout">
-         {/* Placeholder for Profile link if user loggedin */}
+          {/* Placeholder for Profile link if user loggedin */}
           {/* <li className="mx-1">
             <Link to="/profile">
               Profile
@@ -26,14 +25,10 @@ function Nav() {
       return (
         <ul className="signlog flex-row">
           <li className="mx-1 px-2">
-            <Link to="/signup">
-              Signup
-            </Link>
+            <Link to="/signup">Signup</Link>
           </li>
           <li className="mx-1 px-2">
-            <Link to="/login">
-              Login
-            </Link>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       );
@@ -41,13 +36,14 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1 justify-content space-between navbar">
-        <Link to="/">
-          <section className="navbarLink"/>   
-        </Link>
-      <nav>
-        {showNavigation()}
-      </nav>
+    <header
+      className="flex-row px-1 justify-content space-between navbar"
+      style={{ position: "relative", top: "-20px" }}
+    >
+      <Link to="/">
+        <section className="navbarLink" />
+      </Link>
+      <nav>{showNavigation()}</nav>
     </header>
   );
 }
