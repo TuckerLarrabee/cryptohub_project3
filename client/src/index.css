@@ -17,6 +17,15 @@
   scrollbar-color: blue orange;
 }
 
+.news, 
+.exchanges {
+  dispaly: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
 html,
 body {
   min-height: 100%;
@@ -216,8 +225,22 @@ li {
   background-image: url(../src/assets/CryptoHubLogo.png);
   background-size: cover;
   background-position: center;
-  height: 10vh;
+  height: 5vh;
   width: 20vw;
+  left: -30px;
+  position: relative;
+}
+
+.cSaeUB {
+  float: left;
+}
+
+.logout {
+  margin-bottom: 0;
+}
+
+.signlog {
+  margin-bottom: 0;
 }
 
 #cryptoForm {
@@ -275,6 +298,23 @@ font-size: 1.5rem;
   flex-wrap: wrap;
   max-height: 85vh;
   overflow: auto;
+}
+
+.footer {
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+.footerDiv {
+  display: flex;
+  justify-content: center;
+  height: 40px;
 }
 
 /* BEGIN SCROLLBAR STYLING */
@@ -335,7 +375,7 @@ font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 25%;
+  /* width: 25%; */
   height: 250px;
   background-color: rgb(255, 255, 255);
   color: black;
@@ -397,6 +437,12 @@ div.coin:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1615) {
   .card {
     width: 100%;
   }

@@ -6,6 +6,7 @@ import * as AiIcons from 'react-icons/ai';
 import {SidebarData} from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
+// import Auth from "../../utils/auth";
 
 const Drop = styled.div`
     background: #fff;
@@ -26,7 +27,7 @@ const DropIcon = styled(Link)`
 
 const SidebarNav = styled.nav`
     background: #232F3E;
-    width: 250px;
+    width: 17vw;
     height: 100vh;
     display: flex;
     justify-content: center;

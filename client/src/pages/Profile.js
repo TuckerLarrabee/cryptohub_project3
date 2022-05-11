@@ -48,22 +48,30 @@ const Profile = () => {
           "flex-wrap": "wrap",
         }}
       >
-        <h1>Hello, {data?.me?.username}</h1>
-        {favoritedCoins.map((coin) => {
-          return (
-            <Coin
-              name={coin.name}
-              icon={coin.icon}
-              price={coin.price}
-              symbol={coin.symbol}
-              marketCap={coin.marketCap}
-              key={coin.name}
-              id={coin.id}
-              arr={coinArr}
-              showFavorites={true}
-            />
-          );
-        })}
+        <h1 style={{"padding-top": "1rem"}}>Hello, {data?.me?.username}</h1>
+        <div className="profile-container" 
+             style={{"display": "flex",
+                     "flex-wrap": "wrap",
+                     "justifyContent": "center",
+                     "padding-top": "2rem",
+                     "padding-bottom": "2rem"
+        }}>
+          {favoritedCoins.map((coin) => {
+            return (
+              <Coin
+                name={coin.name}
+                icon={coin.icon}
+                price={coin.price}
+                symbol={coin.symbol}
+                marketCap={coin.marketCap}
+                key={coin.name}
+                id={coin.id}
+                arr={coinArr}
+                showFavorites={true}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

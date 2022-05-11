@@ -10,7 +10,17 @@
     "concurrently": "^7.1.0"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@reduxjs/toolkit": "^1.8.1",
+    "antd": "^4.20.4",
+    "axios": "^0.27.2",
+    "chart.js": "^3.7.1",
+    "html-react-parser": "^1.4.12",
+    "millify": "^4.0.0",
+    "moment": "^2.29.3",
+    "react-chartjs-2": "^4.1.0",
     "react-icons": "^4.3.1",
+    "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5"
   }

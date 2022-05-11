@@ -19,12 +19,12 @@ export const SidebarData = [
             },
             {
                 title: 'News',
-                path: '/overview/news',
+                path: '/news',
                 icon: <FaIcons.FaNewspaper />,
             },
             {
                 title: 'Exchanges',
-                path: '/overview/exchanges',
+                path: '/exchanges',
                 icon: <FaIcons.FaExchangeAlt />,
             },
         ]
