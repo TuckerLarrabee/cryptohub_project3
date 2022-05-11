@@ -52,6 +52,8 @@ function App() {
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
+              <Route exact path="/news" component={News} />
+              <Route exact path="/exchanges" component={Exchanges} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route component={NoMatch} />
             </Switch>
