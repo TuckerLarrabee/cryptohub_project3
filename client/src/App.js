@@ -18,6 +18,8 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import OrderHistory from './pages/OrderHistory';
 import Sidebar from './components/Sidebar/Sidebar';
+import { News } from './pages/News';
+import { Exchanges } from './pages/Exchanges';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
