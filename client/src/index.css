@@ -326,6 +326,14 @@ font-size: 1.5rem;
   height: 40px;
 }
 
+.news-items a {
+  font-size: 1.5rem;
+}
+
+.news {
+  align-items: flex-start;
+}
+
 /* BEGIN SCROLLBAR STYLING */
 ::-webkit-scrollbar {
   width: 20px;

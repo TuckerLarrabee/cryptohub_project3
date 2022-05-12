@@ -40,12 +40,13 @@ export const News = () => {
       }
 
       const renderNewsItem = (article, id) => {
-        return <li key={id}><a href={`${article.shareURL}`}>{article.title}</a></li>
+        return <li key={id}><a href={`${article.shareURL}`} target="_blank">{article.title}</a></li>
       }
 
     return (
-        <div className="news">
+        <div style={{"display": "flex"}} className="news">
             <div class="news-items">
+              Crypto News:
               {renderNewsItems()}
             </div>
         </div>
