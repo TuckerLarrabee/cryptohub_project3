@@ -17,6 +17,15 @@
   scrollbar-color: blue orange;
 }
 
+.news, 
+.exchanges {
+  dispaly: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
 html,
 body {
   min-height: 100%;
