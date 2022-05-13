@@ -19,7 +19,7 @@
 
 .news, 
 .exchanges {
-  dispaly: flex;
+  display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
@@ -39,6 +39,27 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login,
+.signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000;
+}
+
+.login h2,
+.signup h2 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
 }
 
 h1,
