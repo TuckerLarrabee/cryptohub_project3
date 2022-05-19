@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <div className="py-2 col-2 cryptoHeader">
+      <div className="py-2 col-12 col-lg-3 cryptoHeader">
         <div className="searchBox">
           <label>
             <h5 className="mx-1 center">Search for a Cryptocurreny:</h5>
@@ -55,7 +55,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="col-8 card-holder">
+      <div className="col-12 col-lg-8 card-holder">
         <div className="cryptoDisplay">
           {filteredCoins.map((coin) => {
             return (

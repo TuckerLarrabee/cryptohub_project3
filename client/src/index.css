@@ -305,8 +305,8 @@ font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
-  padding: 1rem;
-  margin: 2rem;
+  /* padding: 1rem; */
+  margin-top: 1rem;
 }
 
 .cryptoHeader input {
@@ -353,6 +353,22 @@ font-size: 1.5rem;
 
 .news {
   align-items: flex-start;
+}
+
+#email, #pwd, #username {
+  margin-right: 10px;
+}
+
+.logForm .flex-row {
+  align-items: flex-end;
+}
+
+.logbtn, .signbtn {
+  margin: 0.75rem;
+}
+
+.gotoSignup, .gotoLogin {
+  margin: 0.5rem;
 }
 
 /* BEGIN SCROLLBAR STYLING */
@@ -474,20 +490,40 @@ div.coin:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+@media screen and (min-width: 1615px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1201px) {
+  div .fvYIcN {
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Home {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  };
+}
+@media screen and (max-width: 768px) {
+  div .fvYIcN {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 370px) {
+  div .fvYIcN {
+    width: 60vw;
   }
 }
 
-/* @media screen and (max-width: 1411px) {
-  .card-holder {
-    max-width: 100%;
-  }
-} */
 
-@media screen and (min-width: 1615) {
-  .card {
-    width: 100%;
-  }
-}
+
+

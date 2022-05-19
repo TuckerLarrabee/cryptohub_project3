@@ -31,7 +31,7 @@ function Login(props) {
 
   return (
     <div className="login">
-      <Link to="/signup">← Go to Signup</Link>
+      <Link className="gotoSignup" to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
       <form
@@ -64,7 +64,7 @@ function Login(props) {
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button className="logbtn" type="submit">Submit</button>
         </div>
       </form>
     </div>
