@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e597ddd8.chunk.css",
+    "main.js": "/static/js/main.e16ab196.chunk.js",
+    "main.js.map": "/static/js/main.e16ab196.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8a258a78.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8a258a78.js.map",
+    "static/js/2.6f12a43b.chunk.js": "/static/js/2.6f12a43b.chunk.js",
+    "static/js/2.6f12a43b.chunk.js.map": "/static/js/2.6f12a43b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d346b92c38832ba6f76620909d2af469.js": "/precache-manifest.d346b92c38832ba6f76620909d2af469.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e597ddd8.chunk.css.map": "/static/css/main.e597ddd8.chunk.css.map",
+    "static/js/2.6f12a43b.chunk.js.LICENSE.txt": "/static/js/2.6f12a43b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/CryptoHubLogo.5fc13001.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a258a78.js",
+    "static/js/2.6f12a43b.chunk.js",
+    "static/css/main.e597ddd8.chunk.css",
+    "static/js/main.e16ab196.chunk.js"
+  ]
+}
