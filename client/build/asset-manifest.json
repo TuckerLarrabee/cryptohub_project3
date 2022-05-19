@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.91761734.chunk.css",
+    "main.css": "/static/css/main.78a73abd.chunk.css",
     "main.js": "/static/js/main.18e4dc1f.chunk.js",
     "main.js.map": "/static/js/main.18e4dc1f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8a258a78.js",
@@ -8,16 +8,16 @@
     "static/js/2.6f12a43b.chunk.js": "/static/js/2.6f12a43b.chunk.js",
     "static/js/2.6f12a43b.chunk.js.map": "/static/js/2.6f12a43b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2d195095b34d3ae23fd48f4441dd3095.js": "/precache-manifest.2d195095b34d3ae23fd48f4441dd3095.js",
+    "precache-manifest.1667db64153b6f18f58a72922f9a5877.js": "/precache-manifest.1667db64153b6f18f58a72922f9a5877.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.91761734.chunk.css.map": "/static/css/main.91761734.chunk.css.map",
+    "static/css/main.78a73abd.chunk.css.map": "/static/css/main.78a73abd.chunk.css.map",
     "static/js/2.6f12a43b.chunk.js.LICENSE.txt": "/static/js/2.6f12a43b.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/CryptoHubLogo.5fc13001.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8a258a78.js",
     "static/js/2.6f12a43b.chunk.js",
-    "static/css/main.91761734.chunk.css",
+    "static/css/main.78a73abd.chunk.css",
     "static/js/main.18e4dc1f.chunk.js"
   ]
 }

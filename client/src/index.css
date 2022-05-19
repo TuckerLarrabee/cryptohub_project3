@@ -257,7 +257,7 @@ li {
   position: relative;
 }
 
-.cSaeUB {
+.cSaeUB, .cqtdFh {
   float: left;
 }
 
@@ -497,8 +497,14 @@ div.coin:hover {
 }
 
 @media screen and (max-width: 1201px) {
-  div .fvYIcN {
+  div .fvYIcN, div .gorkCe {
     width: 25vw;
+  }
+}
+
+@media screen and (max-width: 1201px) {
+  .navbarLink {
+    left: 0px;
   }
 }
 
@@ -514,12 +520,12 @@ div.coin:hover {
   };
 }
 @media screen and (max-width: 768px) {
-  div .fvYIcN {
+  div .fvYIcN, div .gorkCe  {
     width: 50vw;
   }
 }
 @media screen and (max-width: 370px) {
-  div .fvYIcN {
+  div .fvYIcN, div .gorkCe {
     width: 60vw;
   }
 }
