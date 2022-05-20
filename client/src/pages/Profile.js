@@ -6,11 +6,16 @@ import Axios from "axios";
 import Coin from "../components/Coin/Coin";
 
 const Profile = () => {
+  
+  
   const [listOfCryptos, setListOfCryptos] = useState([]);
-  const [searchWord, setSearchWord] = useState("");
+  // const [searchWord, setSearchWord] = useState("");
   const [coinArr, setCoinArr] = useState([]);
-
+  
+  const isLoggedIn = localStorage.getItem("id_token");
   const { loading, data } = useQuery(QUERY_ME);
+
+  console.log(isLoggedIn);
 
   useEffect(() => {
     if (data) {
@@ -38,9 +43,11 @@ const Profile = () => {
       })
     : [];
 
+    console.log(favoritedCoins)
+
   return (
     <div>
-      <div
+      <div className="profileDiv"
         style={{
           display: "flex",
           "flex-direction": "column",
@@ -48,15 +55,18 @@ const Profile = () => {
           "flex-wrap": "wrap",
         }}
       >
-        <h1 style={{"padding-top": "1rem"}}>Hello, {data?.me?.username}</h1>
-        <div className="profile-container" 
-             style={{"display": "flex",
-                     "flex-wrap": "wrap",
-                     "justifyContent": "center",
-                     "padding-top": "2rem",
-                     "padding-bottom": "2rem"
-        }}>
-          {favoritedCoins.map((coin) => {
+        {isLoggedIn ? <h1 style={{ "padding-top": "1rem" }}>Hello, {data?.me?.username}</h1> : <h1 style={{ "padding-top": "1rem", "position": "absolute", "top": "50%" }}>Please sign up or login to access your profile!</h1>}
+        <div
+          className="profile-container"
+          style={{
+            display: "flex",
+            "flex-wrap": "wrap",
+            "justify-content": "center",
+            "padding-top": "2rem",
+            "padding-bottom": "2rem",
+          }}
+        >
+          {favoritedCoins.length ? favoritedCoins.map((coin) => {
             return (
               <Coin
                 name={coin.name}
@@ -70,7 +80,7 @@ const Profile = () => {
                 showFavorites={true}
               />
             );
-          })}
+          }) : <p style={{textAlign: "Center", "paddingRight": "25px"}} >You have not favorited any cryptocurrencies yet!</p>}
         </div>
       </div>
     </div>

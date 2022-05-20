@@ -17,7 +17,7 @@ const Drop = styled.div`
 `;
 
 const DropIcon = styled(Link)`
-  margin-left: 2rem;
+  margin-left: 0.75rem;
   font-size: 2rem;
   height: 80px;
   display: flex;
@@ -49,8 +49,8 @@ const Sidebar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "#black" }}>
-        <Drop style={{"float": "left"}}>
-          <DropIcon to="#">
+        <Drop id="burger" style={{"float": "left"}}>
+          <DropIcon id="burgerTwo" to="#">
             <FaIcons.FaBars onClick={showSidebar} />
           </DropIcon>
         </Drop>

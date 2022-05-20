@@ -14,6 +14,9 @@ function Coin({
   arr,
   showFavorites,
 }) {
+
+  // console.log(showFavorites)
+
   const [addFavorite] = useMutation(FAVORITE_COIN, {
     refetchQueries: [QUERY_ME],
   });

@@ -28,7 +28,7 @@ export const News = () => {
     return (
         <div style={{"display": "flex"}} className="news">
             <div class="news-items">
-              Crypto News:
+              Cryptocurrency News:
               {renderNewsItems()}
             </div>
         </div>

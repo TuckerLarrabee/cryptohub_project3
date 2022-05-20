@@ -27,7 +27,7 @@ export const Exchanges = () => {
 
     return (
         <div className="news">
-          <div><h1>Exchanges</h1></div>
+          {/* <div><h1>Exchanges</h1></div> */}
             <style jsx>{`
               .news-items {
                     list-style: none;
