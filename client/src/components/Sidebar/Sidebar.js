@@ -55,7 +55,7 @@ const showSidebar = () => setSidebar(!sidebar)
             <FaIcons.FaBars onClick={showSidebar} />
         </DropIcon>
     </Drop>
-    <SidebarNav sidebar={sidebar}>
+    <SidebarNav className='sidebar' sidebar={sidebar}>
         <SidebarWrap>
         <DropIcon to='#'>
             <AiIcons.AiOutlineClose onClick={showSidebar} />
