@@ -57,6 +57,7 @@ body {
 
 .login h2,
 .signup h2 {
+  font-weight: bolder;
   text-align: center;
   padding: 0 0 20px 0;
   border-bottom: 1px solid silver;
@@ -248,17 +249,13 @@ li {
 }
 
 .navbarLink {
-  background-image: url(../src/assets/CryptoHubLogo.png);
+  /* background-image: url(../src/assets/CryptoHubLogo.png);
   background-size: cover;
-  background-position: center;
-  height: 5vh;
+  background-position: center; */
+  /* height: 5vh; */
   width: 20vw;
-  left: -30px;
+  left: 30px;
   position: relative;
-}
-
-.cSaeUB, .cqtdFh {
-  float: left;
 }
 
 .logout {
@@ -497,7 +494,7 @@ div.coin:hover {
 }
 
 @media screen and (max-width: 1201px) {
-  div .fvYIcN, div .gorkCe {
+  #hello {
     width: 25vw;
   }
 }
@@ -519,14 +516,16 @@ div.coin:hover {
     width: 100%;
   };
 }
+
 @media screen and (max-width: 768px) {
-  div .fvYIcN, div .gorkCe  {
+  #hello  {
     width: 50vw;
   }
 }
+
 @media screen and (max-width: 370px) {
-  div .fvYIcN, div .gorkCe {
-    width: 60vw;
+  #hello {
+    width: 80vw;
   }
 }
 

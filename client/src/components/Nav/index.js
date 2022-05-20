@@ -1,20 +1,14 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+// import Crypto from "../../assets/CryptoHubLogo.png"
 
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row logout">
-          {/* Placeholder for Profile link if user loggedin */}
-          {/* <li className="mx-1">
-            <Link to="/profile">
-              Profile
-            </Link>
-          </li> */}
           <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
@@ -40,8 +34,10 @@ function Nav() {
       className="flex-row px-1 justify-content space-between navbar"
       style={{ position: "relative", top: "-20px" }}
     >
-      <Link to="/">
-        <section className="navbarLink" />
+      <Link className="navbarLink"  to="/">
+        {/* <img src={require('../../assets/CryptoHubLogo.png')} className="navbarLink"></img> */}
+        {/* <section className="navbarLink" /> */}
+        CryptoHub
       </Link>
       <nav>{showNavigation()}</nav>
     </header>
