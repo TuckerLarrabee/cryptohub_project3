@@ -80,7 +80,7 @@ const Profile = () => {
                 showFavorites={true}
               />
             );
-          }) : <p style={{textAlign: "Center", "paddingRight": "25px"}} >You have not favorited any cryptocurrencies yet!</p>}
+          }) : null}
         </div>
       </div>
     </div>
